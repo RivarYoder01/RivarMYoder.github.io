@@ -1,0 +1,352 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* DEFAULTS---------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #383434;
+    /*font: 18px Geneva, sans-serif;*/
+}
+.centered {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1500px;
+}
+
+/*HEADER------------------------------------------------------*/
+
+.navigation {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+        "nav_a" "logo" "nav_b";
+}
+
+.nav_a ul, .nav_b ul {
+    display: flex;
+    padding: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li, li a, .dropbtn {
+    display: inline-block;
+    color: #E9E3DE;
+    font-family: "Cinzel", serif;
+    font-size: 36px;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+    padding: 0 16px;
+    text-decoration: none;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #C1A7E1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.logo h1 {
+    grid-area: logo;
+}
+
+header .logo, footer .logo {
+    font-family: "Kings", cursive;
+    font-size: 82px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: #E9E3DE;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+header .logo a:hover, header .logo a:active, header .logo a:visited, header .logo a:link,
+footer .logo a:hover, footer .logo a:active, footer .logo a:visited, footer .logo a:link{
+    text-decoration: none;
+    color: #E9E3DE;
+}
+
+header {
+    padding: 30px 0;
+    position: absolute;
+    top: 1%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    z-index: 99999;
+}
+
+/*HERO SECTION------------------------------------------------------*/
+
+body .hero {
+    background: url('../assets/components/hero.png') no-repeat center;
+    padding: 200px 0;
+    top: 0;
+    width: 100%;
+    min-width: inherit !important;
+}
+
+main {
+    background-size: cover;
+    background: #000;
+    width: 100% !important;
+    left: 0;
+    right: 0;
+}
+
+main h1 {
+    font-family: "Cinzel", serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 48px;
+    color: #E9E3DE;
+    padding: 60px 80px 0 80px;
+}
+
+p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 20px;
+    color: #E9E3DE;
+    padding: 60px 80px 0 80px;
+}
+
+button {
+    font-family: "Cinzel Decorative", sans-serif;
+    font-size: 24px;
+    color: #383434;
+    background-color: #C1A7E1;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 30px;
+    width: 300px;
+}
+
+button:hover {
+    color: #383434;
+    background-color: #E9E3DE;
+    cursor: pointer;
+}
+
+.hero_button {
+    padding: 60px 80px 60px 80px;
+    display: flex;
+    column-gap: 20px;
+}
+
+/*MAIN------------------------------------------------------*/
+
+.preview_gallery {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "img text";
+    padding: 50px 0;
+}
+
+h2 {
+    font-family: "Cinzel Decorative", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #e3c49b;
+}
+
+.preview_gallery p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 18px;
+    color: #E9E3DE;
+    padding: 20px 0 40px 0;
+}
+
+.preview_img {
+    grid-area: img;
+}
+
+.preview_text {
+    grid-area: text;
+    padding-left: 85px;
+}
+
+hr {
+    color: #E3C49B;
+    background-color: #E3C49B;
+    height: 3px;
+}
+
+/*FOOTER------------------------------------------------------*/
+footer {
+    background: #000;
+    display: grid;
+    padding: 60px 80px;
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-areas:
+        "browse projects logo";
+}
+
+footer li, footer a {
+    display: block;
+    text-align: left;
+    color: #E3C49B;
+    margin: 0;
+    padding: 5px 0;
+}
+
+footer .browse{
+    grid-area: browse;
+}
+footer .projects{
+    grid-area: projects;
+}
+footer .logo {
+    grid-area: logo;
+    padding: 50px 80px;
+}
+
+.copyright, .copyright p {
+    background-color: #000;
+    color: #E9E3DE;
+    text-align: center;
+    padding: 0 0 20px 0;
+}
+
+/*MEDIA QUERIES------------------------------------------------------*/
+@media all and (max-width: 1470px) {
+    .navigation {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "logo"
+        "nav_a"
+        "nav_b";
+    }
+
+    .nav_a ul, .nav_b ul {
+        display: inline-block;
+        padding: 10px;
+    }
+
+    .preview_gallery {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "img"
+            "text";
+        margin: auto;
+    }
+
+    .preview_img {
+        margin: auto;
+    }
+
+    .preview_text {
+        padding-top: 30px;
+        padding-left: 0;
+        margin: auto;
+        text-align: center;
+    }
+
+    footer {
+        grid-template-rows: 2fr 2fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "browse"
+        "projects"
+        "logo";
+        grid-row-gap: 20px;
+    }
+
+    footer li, footer a {
+        text-align: center;
+        padding: 5px;
+    }
+
+    footer .logo {
+        grid-area: logo;
+        padding: 0 40px;
+        margin: 0;
+    }
+}
