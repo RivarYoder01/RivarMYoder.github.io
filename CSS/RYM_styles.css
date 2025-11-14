@@ -320,7 +320,6 @@ footer .logo {
 
 .bio p {
     padding: 50px 0 10px 0;
-    color: #E3C49B;
 }
 
 .bio img {
@@ -376,15 +375,27 @@ h4 {
 
 }
 
+/*GALLERY------------------------------------------------------------*/
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 60px 0;
+}
+
+.gallery a img, .gallery img {
+    width: 100%;
+    padding: 10px;
+}
+
 /*MEDIA QUERIES------------------------------------------------------*/
 @media all and (max-width: 1470px) {
     .navigation {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         grid-template-areas:
-        "logo"
-        "nav_a"
-    "nav_b";
+        "logo logo"
+        "nav_a nav_b";
         grid-row-gap: 20px;
     }
 
@@ -445,4 +456,68 @@ h4 {
         padding: 0 40px;
         margin: 0;
     }
+}
+
+.tooltip {
+    position: relative;
+    color: orange;
+    text-align: center;
+    display: inline-block;
+}
+
+.tooltip::before {
+    content: attr(data-title);
+    position: absolute;
+    margin-bottom: 35px;
+    bottom: 100%;
+    margin-left: calc(50% - 35px);
+    width: 50px;
+    padding: 12px;
+    background: #777;
+    background: linear-gradient(#405180, #0e3d80);
+    font-family: Calibri, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 0 #222;
+    opacity: 0;
+    border-radius: 6px;
+    border: 1px solid #024254;
+    border-top: 1px solid #eee;
+    border-bottom: 3px solid #024254;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+
+    transition: opacity 0.7s, margin-bottom 0.7s, box-shadow 0.2s;
+    outline: none;
+    pointer-events: none;
+}
+
+.tooltip:hover::before {
+    opacity: 1;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0);
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    margin-bottom: 27px;
+    bottom: 100%;
+    margin-left: calc(-50% - 6px);
+    width: 1px;
+    height: 1px;
+    border-top: 10px solid #0e3d80;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.7s, margin-bottom 0.7s;
+    pointer-events: none;
+
+}
+
+.tooltip:hover::after {
+    margin-bottom: 7px;
+    opacity: 1;
 }
