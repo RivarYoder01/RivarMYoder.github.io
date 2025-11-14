@@ -306,9 +306,11 @@ footer li, footer a {
 footer .browse{
     grid-area: browse;
 }
+
 footer .projects{
     grid-area: projects;
 }
+
 footer .logo {
     grid-area: logo;
     padding: 50px 80px;
@@ -439,8 +441,6 @@ h4 {
 .single_gallery div button {
     margin: 0 0 20px 80px;
 }
-
-
 
 /*MEDIA QUERIES------------------------------------------------------*/
 @media all and (max-width: 1350px) {
