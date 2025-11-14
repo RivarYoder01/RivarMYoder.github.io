@@ -391,11 +391,12 @@ h4 {
 /*MEDIA QUERIES------------------------------------------------------*/
 @media all and (max-width: 1470px) {
     .navigation {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
-        "logo logo"
-        "nav_a nav_b";
+        "logo"
+        "nav_a"
+        "nav_b";
         grid-row-gap: 20px;
     }
 
