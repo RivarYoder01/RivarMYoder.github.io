@@ -543,6 +543,11 @@ h4 {
         "nav_b";
         grid-row-gap: 20px;
     }
+
+    .single_gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
 }
 
 .tooltip {
